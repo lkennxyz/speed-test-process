@@ -8,6 +8,9 @@
   "scripts": {
     "start": "node -r esm -r dotenv/config index.js"
   },
+  "bin": {
+	"speedtest-process": "./index.js"
+  },
   "dependencies": {
     "assert": "^1.4.1",
     "fast-speed-test": "^1.1.0",

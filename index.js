@@ -1,3 +1,5 @@
+#!/usr/bin/env node -r esm -r dotenv
+
 import getSpeed from 'fast-speed-test';
 import MongoClient from 'mongodb';
 import assert from 'assert';
