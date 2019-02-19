@@ -13,11 +13,11 @@ async function dbInsert() {
   try {
     const uri = process.env.MONGO_URI;
     const db = process.env.MONGO_DB;
-    const collection = process.env.MONGO_COLLECTION;
+    const db-collection = process.env.MONGO_COLLECTION;
     const speed = await fast();
 
     await client.connect();
-    const collection = client.db(db).collection(collection);
+    const collection = client.db(db).collection(db-collection);
     const insert = await collection.insertOne({ mbps: speed, time: DateTime.Now() });
     assert.equal(1, insert);
   } catch (err) {
