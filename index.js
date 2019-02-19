@@ -13,7 +13,7 @@ async function dbInsert() {
   try {
     const uri = process.env.MONGO_URI;
     const db = process.env.MONGO_DB;
-    const db-collection = process.env.MONGO_COLLECTION;
+    const dbCollection = process.env.MONGO_COLLECTION;
     const speed = await fast();
 
     await client.connect();
