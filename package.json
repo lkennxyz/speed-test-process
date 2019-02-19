@@ -6,12 +6,15 @@
   "author": "Liam Kennedy  <liam@lkenn.xyz>",
   "license": "MIT",
   "scripts": {
-    "start": "node -r esm index.js"
+    "start": "node -r esm -r dotenv/config index.js"
   },
   "dependencies": {
-    "fast-speed-test": "^1.1.0"
+    "assert": "^1.4.1",
+    "fast-speed-test": "^1.1.0",
+    "mongodb": "^3.1.13"
   },
   "devDependencies": {
+    "dotenv": "^6.2.0",
     "esm": "^3.2.5"
   }
 }
