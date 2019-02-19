@@ -9,11 +9,11 @@ async function fast() {
 }
 
 async function dbInsert() {
+  const uri = process.env.MONGO_URI;
+  const db = process.env.MONGO_DB;
+  const dbCollection = process.env.MONGO_COLLECTION;
   const client = new MongoClient(uri, { useNewUrlParser: true });
   try {
-    const uri = process.env.MONGO_URI;
-    const db = process.env.MONGO_DB;
-    const dbCollection = process.env.MONGO_COLLECTION;
     const speed = await fast();
 
     await client.connect();
