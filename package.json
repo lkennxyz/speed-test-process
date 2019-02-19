@@ -1,0 +1,18 @@
+{
+  "name": "speed-test-process",
+  "version": "1.0.0",
+  "description": "Scheduled speed test process to run a speed tests and save them to a DB",
+  "main": "index.js",
+  "author": "Liam Kennedy  <liam@lkenn.xyz>",
+  "license": "MIT",
+  "scripts": {
+	"start": "node -r esm index.js"
+  },
+  "dependencies": {
+    "fast-speed-test": "^1.1.0",
+    "speed-test": "^2.0.0"
+  },
+  "devDependencies": {
+    "esm": "^3.2.5"
+  }
+}
