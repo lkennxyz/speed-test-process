@@ -12,16 +12,15 @@ async function dbInsert() {
   const uri = process.env.MONGO_URI;
   const db = process.env.MONGO_DB;
   const dbCollection = process.env.MONGO_COLLECTION;
-  const client = new MongoClient(uri, { useNewUrlParser: true });
+  const client = await new MongoClient(uri, { useNewUrlParser: true });
   try {
-    const speed = await fast();
-
-    await client.connect();
-    const collection = client.db(db).collection(db-collection);
-    const insert = await collection.insertOne({ mbps: speed, time: DateTime.Now() });
-    assert.equal(1, insert);
+  await client.connect();
+  const speed = await fast();
+  const collection = await client.db(db).collection(dbCollection);
+  const insert = await collection.insertOne({ mbps: speed, time: new Date() });
+  assert.equal(1, insert.insertedCount);
   } catch (err) {
-    console.error(err.stack);
+    console.error(err);
   }
   client.close();
 }
