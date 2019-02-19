@@ -1,4 +1,3 @@
-// const speedTest = require('speed-test');
 import getSpeed from 'fast-speed-test';
 
 async function fast() {

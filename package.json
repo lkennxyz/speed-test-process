@@ -6,11 +6,10 @@
   "author": "Liam Kennedy  <liam@lkenn.xyz>",
   "license": "MIT",
   "scripts": {
-	"start": "node -r esm index.js"
+    "start": "node -r esm index.js"
   },
   "dependencies": {
-    "fast-speed-test": "^1.1.0",
-    "speed-test": "^2.0.0"
+    "fast-speed-test": "^1.1.0"
   },
   "devDependencies": {
     "esm": "^3.2.5"
