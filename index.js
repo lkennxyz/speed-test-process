@@ -19,7 +19,8 @@ async function dbInsert() {
   await client.connect();
   const speed = await fast();
   const collection = await client.db(db).collection(dbCollection);
-  const insert = await collection.insertOne({ mbps: speed, time: new Date() });
+  const date = new Date();
+  const insert = await collection.insertOne({ mbps: speed, time: date, day: date.getDay(), hour: date.getHours() });
   assert.equal(1, insert.insertedCount);
   } catch (err) {
     console.error(err);
