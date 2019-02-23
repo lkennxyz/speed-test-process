@@ -14,15 +14,13 @@ import assert from 'assert';
       .sort({ "time": 1 })
       .toArray();
     data.forEach(async(el) => {
-      console.log(el);
       const date = new Date(Number(el.time));
       const mod = await collection.updateOne(
         {_id: el._id},
         {$set: {
-          day: date.getDay(),
-          hour: date.getHours(),
+          "day": date.getDay(),
+          "hour": date.getHours(),
         }},
-        {upsert: true}
       );
       assert.equal(mod.modifiedCount, 1);
     });
@@ -30,5 +28,5 @@ import assert from 'assert';
     console.error(err);
   }
   client.close();
-  process.exit(0);
+  // process.exit(0);
 })();
