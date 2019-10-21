@@ -1,4 +1,4 @@
-#!~/.nvm/versions/node/v11.10.0/bin/node node -r esm -r dotenv
+#!~/usr/bin/env node -r esm -r dotenv
 
 import getSpeed from 'fast-speed-test';
 import MongoClient from 'mongodb';
