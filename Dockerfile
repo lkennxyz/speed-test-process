@@ -2,8 +2,6 @@ FROM node:current-alpine
 
 WORKDIR /usr/src/app
 COPY package.json ./
-RUN yarn
 COPY . .
-RUN CHMOD +x index.js
-RUN yarn link
-RUN speedtest-process
+RUN chmod +x index.js && yarn && yarn link && RUN crontab ./crontab && touch cron.log
+CMD crond -f
